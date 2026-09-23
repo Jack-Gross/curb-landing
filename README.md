@@ -1,6 +1,23 @@
 # CURB
 
-CURB — the marketplace for residential driveway parking. Landing page built with Next.js + Tailwind. Currently in pre-launch in San Luis Obispo, CA.
+The marketplace for residential driveway parking. Homeowners near stadiums and venues rent out empty driveway space. Drivers get a guaranteed spot.
+
+**[Live site →](https://curb-landing.vercel.app)**
+
+## Why
+
+Before writing any code I ran a 69-response customer survey in San Luis Obispo:
+
+- **88%** already pay for parking
+- **57%** have an empty driveway they could rent out
+- **83%** would use curbside parking vs. **16%** in-garage, so I cut the in-garage option and focused the MVP on what cleared
+
+## Tech stack
+
+- **Next.js 14** (App Router) + **TypeScript**
+- **Tailwind CSS** + **shadcn/ui** primitives
+- **Framer Motion** for scroll animations
+- Deployed on **Vercel**
 
 ## Run locally
 
@@ -11,18 +28,11 @@ npm run dev
 
 Then open http://localhost:3000.
 
-## Tech stack
-
-- **Next.js 14** (App Router) + **TypeScript**
-- **Tailwind CSS** + **shadcn/ui** primitives
-- **Framer Motion** for scroll animations
-- **Inter** via `next/font`
-
 ## Project structure
 
 ```
 app/
-  api/signup/route.ts   # captures driver + host signups → data/signups.json
+  api/signup/route.ts   # captures driver + host signups
   layout.tsx
   page.tsx
 components/
@@ -32,12 +42,8 @@ lib/
   utils.ts              # cn() helper
 ```
 
-## Signups
-
-The dev signup endpoint persists submissions to `data/signups.json` (gitignored). This will be swapped for Formspree before launch.
-
 ## Status
 
-Beta launching in San Luis Obispo, Summer 2026.
+Pre-launch in San Luis Obispo, collecting driver and host signups on the waitlist.
 
-Built by [Jack Gross](mailto:jgross18@calpoly.edu).
+Built by [Jack Gross](https://jackgross.vercel.app).
